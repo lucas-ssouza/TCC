@@ -12,6 +12,7 @@ public class OneCardManager : MonoBehaviour {
     public Text NameText;
     public Text ManaCostText;
     public Text DescriptionText;
+    public Text CardTypeText;
     public Text HealthText;
     public Text AttackText;
     [Header("Image References")]
@@ -71,6 +72,24 @@ public class OneCardManager : MonoBehaviour {
         DescriptionText.text = cardAsset.Description;
         // 5) Change the card graphic sprite
         CardGraphicImage.sprite = cardAsset.CardImage;
+        // 6) add Type
+        // com a verificação passa a funcionar pesar de acusar erro mas em campo continua errado
+        /*if (cardAsset != null)
+        {
+            if (CardTypeText != null && cardAsset.Type != null)
+            {
+                CardTypeText.text = cardAsset.Type;
+            }
+            else
+            {
+                Debug.LogError("CardTypeText or cardAsset.Type is null!");
+            }
+        }
+        else
+        {
+            Debug.LogError("cardAsset is null!");
+        }*/
+
 
         if (cardAsset.MaxHealth != 0)
         {

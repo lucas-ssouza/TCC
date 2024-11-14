@@ -102,6 +102,13 @@ public class Player : MonoBehaviour, ICharacter
                 Die(); 
         }
     }
+    // tirar se pa a função
+    private int attack;
+    public int Attack
+    {
+        get { return attack; }
+        set { attack = value; }
+    }
 
     // CODE FOR EVENTS TO LET CREATURES KNOW WHEN TO CAUSE EFFECTS
     public delegate void VoidWithNoArguments();

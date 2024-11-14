@@ -22,6 +22,8 @@ public class CardAsset : ScriptableObject
     public string Description;  // Description for spell or character
 	public Sprite CardImage;
     public int ManaCost;
+    [TextArea(2, 3)]
+    public string Type;
 
     [Header("Creature Info")]
     public int MaxHealth;   // =0 => spell card

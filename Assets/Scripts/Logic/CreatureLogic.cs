@@ -56,9 +56,17 @@ public class CreatureLogic: ICharacter
 
     // property for Attack
     private int baseAttack;
-    public int Attack
+    public int initialAttack
     {
         get{ return baseAttack; }
+    }
+
+    private int attack;
+    public int Attack
+    {
+        get { return attack; }
+
+        set { attack = value; } // tirar se pa
     }
      
     // number of attacks for one turn if (attacksForOneTurn==2) => Windfury
@@ -76,6 +84,7 @@ public class CreatureLogic: ICharacter
         baseHealth = ca.MaxHealth;
         Health = ca.MaxHealth;
         baseAttack = ca.Attack;
+        Attack = ca.Attack; // tirar se pa
         attacksForOneTurn = ca.AttacksForOneTurn;
         // AttacksLeftThisTurn is now equal to 0
         if (ca.Charge)
